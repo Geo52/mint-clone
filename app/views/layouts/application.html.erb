@@ -24,6 +24,9 @@
   </head>
 
   <body>
+    <% if Current.user %>
+    <%= button_to "Logout", session_path, method: :delete %>
+    <% end %>
     <%= yield %>
   </body>
 </html>
